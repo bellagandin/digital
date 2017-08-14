@@ -1,0 +1,247 @@
+
+/*Links CSS*/
+
+		@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/barlev-aaa-bold.otf);
+    }
+		@font-face {
+    font-family: AlmoniFont;
+    src: url(fonts/trashimclm-bold-webfont.woff);
+}
+
+a{
+	text-decoration: none;
+	color:inherit;
+}
+
+/*Links CSS on mouse-over*/
+a:hover{
+	font-weight: bold;
+}
+
+body {
+	background-color:#e8f7fc  ;
+	font-family: sans-serif;
+	background-image:url(books.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+  direction: rtl;
+
+}
+
+select{
+	width: 150px;
+}
+
+#presenting {
+	color:white;
+    			font-size:200%;
+    			font-stretch:expanded;
+    			text-transform: uppercase;
+    			font-weight: bold;
+    			margin: auto;
+    			text-align: center;
+                font-family:myFirstFont;
+}
+
+.menu{
+	left: 50%;
+	margin: auto;
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px 20px 20px 20px;
+	padding: 10px;
+  font-size:126%;
+	background-color:#867f8c ;
+	color:#e8f7fc ;
+	width:800px;
+	direction: rtl;
+	font-family:AlmoniFont;
+}
+
+.menuSMALL{
+	left: 50%;
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	border-radius: 50px 50px 50px 50px;
+	padding: 10px;
+  font-size:126%;
+	background-color:#DEE0CF ;
+	color:#7B8D8E ;
+	width:500px;
+	direction: rtl;
+}
+
+.tabs{
+ 	left: 50%;
+ 	margin: auto;
+ 	display: block;
+ 	margin-top: 50px;
+ 	margin-bottom: 50px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border-radius: 20px 20px 20px 20px;
+ 	padding: 10px;
+   font-size:126%;
+ 	background-color: #e5cdb3 ;
+ 	color: #86592d;
+ 	width:1000px;
+ 	direction: rtl;
+ 	font-family:AlmoniFont;
+ 	}
+
+
+ 	#resultSearchDiv{
+ 	left: 50%;
+     	margin: auto;
+     	display: block;
+     	margin-top: 50px;
+     	margin-bottom: 50px;
+     	margin-left: auto;
+     	margin-right: auto;
+     	border-radius: 20px 20px 20px 20px;
+     	padding: 10px;
+       font-size:126%;
+     	background-color:#a39b7d ;
+     	color:#e8f7fc ;
+     	width:1000px;
+     	direction: rtl;
+     	font-family:AlmoniFont;
+ 	}
+
+.largeEnglish {
+	font-size:110%;
+	font-stretch:expanded;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: auto;
+	text-align: center;
+	direction: ltr;
+}
+
+h1{
+	font-size:110%;
+	font-stretch:expanded;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: auto;
+	text-align: center;
+	direction: rtl;
+}
+
+h2{
+	overflow: auto;
+	white-space: nowrap;
+	font-size:70%;
+	margin: auto;
+	width: 90%;
+	direction: rtl;
+}
+
+h4{
+	overflow: auto;
+	font-family: italic bold;
+	font-size:95%;
+	width: 90%;
+	direction: rtl;
+}
+
+
+h5{
+	overflow: auto;
+	font-size:80%;
+	width: 90%;
+	direction: rtl;
+}
+
+.large {
+	font-size:110%;
+	font-stretch:expanded;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: auto;
+	text-align: center;
+	direction: rtl;
+}
+
+.small {
+	font-size:80%;
+	margin: auto;
+	width: 60%;
+}
+
+.smallHeadlineHebrew {
+	overflow: auto;
+	white-space: nowrap;
+	font-size:70%;
+	margin: auto;
+	width: 90%;
+	direction: rtl;
+}
+
+.smalleSTAT {
+	overflow: auto;
+	white-space: nowrap;
+	font-size:70%;
+	margin: auto;
+	width: 90%;
+	direction: ltr;
+}
+
+.smalle {
+  font-family:"COURIER";
+	font-size:70%;
+	margin: auto;
+	width: 90%;
+	direction: ltr;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+		color: black;
+}
+
+#map {
+  width: 600px;
+  height: 450px;
+  border: 0;
+  frameborder: 0;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  padding: 5px;
+  border: 0px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+input[type="textbox"] {
+      width: 250px;
+}
+
+
+#header {
+			color:#5D4C46;
+			font-size:200%;
+			font-stretch:expanded;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 10px;
+			text-align: center;
+            font-family:myFirstFont;
+		}

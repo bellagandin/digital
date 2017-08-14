@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Google maps api: key="AIzaSyAJpKHvZqDFWpdAbK5ViY8u7D2ISXKsqYs"-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="helper.js"></script>
+    <script src="json2xml.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJpKHvZqDFWpdAbK5ViY8u7D2ISXKsqYs&libraries=drawing,places"></script>
+    <script type="text/javascript" src="mp.js"></script>
+    <link rel="stylesheet" type="text/css" href="Resources/styles.css">
+    <!-- <script type="text/javascript" src="data2.json"></script> -->
+</head>
+
+<body onload="getContent.content()" cz-shortcut-listen="true">
+<br><br>
+<!--<h1 style="text-align: center"> CHANGE THE CONTENT OF THIS TITLE AND THE THINGS BENEATH IT!!! </h1>-->
+<p id="presenting" style="color: #86592d">
+    <!--<img src="Resources/images.jpg" alt="This is an image placeholder! fix src to show a picture" width="300" height="200/">-->
+    <br><br>
+    מיני פרוייקט במדעי הרוח הדיגיטליים
+    <br><br>
+    מגישים: בלה גנדין,אייל ארז,נדב זילברשטיין,רועי ורקר
+    <br><br>
+    בהנחיית ד"ר יעל נצר, המחלקה למדעי המחשב, אוניברסיטת בן גוריון בנגב
+    <br><br>
+</p>
+
+<div class="tabs">
+    <h1>על הפרויקט</h1>
+    <P>הפרויקט עוסק ביצירת מהדורות אלקטרוניות של נכסי הספרות העברית וריכוזן באתר אינטרנט לטובת הציבור, בחינם ובאופן
+        חופשי לשימוש. כמו כן,המטרה היא להביא את כלל היצירה העברית אל האינטרנט, מתוך החומר הנמצא ברשות הציבור, לפי חוק
+        זכויות יוצרים</P>
+</div>
+
+<div class="tabs">
+    <h1>רקע</h1>
+    <span>
+      כאשר חיפשנו תחום מעניין "להנגיש" באמצעים דיגיטליים, הבחנו כי לא קיים מנוע חיפוש דיגיטלי אחרי מאמרים שנמצאים באתר בן גוריון. מנוע חיפוש מציג מאמרים דרך כמה אפשרויות בחירה: בדף נפרד, כ jason וכדומה.
+
+    </span>
+    <br><br>
+    <span>
+      לכן, שמנו לנו למטרה לפרסר את המידע שהוצאנו מאתר פרויקט בן יהודה ולעשות מניפולציות דיגיטליות שונות כדי להנגיש אותם למשתמשים במידע בצורה נוחה ואינפורמטיבית, וכן להשתמש בפורמט שיצרנו כדי להציג בעצמו מידע.
+
+    </span>
+</div>
+
+<div class="tabs">
+    <h1>תהליך העבודה</h1>
+
+    העבודה התחלקה לכמה שלבים:
+    <br>
+    <h3>שלב ראשון: הוצעת המידע מפרויקט בן יהודה: </h3>
+    1) מטרת הקוד היא לשלוף מידע מאתר "פרויקט בן יהודה" לגבי יוצרים ויצירותיהם.
+    <br> הקוד כתוב בשפת פייתון, ומשתמש בספריית BeautifulSoup. ספרייה שנועדה לשליפת מידע מאתרי אינטרנט הכתובים בשפת HTML.
+    בעזרת הספרייה נוכל להיכנס באופן אוטומטי לכל לינק הנמצא באתר, וכמובן לקבל מידע אודות שם היוצרים, שם היצירות, תוכן
+    היצירות ועוד.<br>
+    בתור התחלה, אספנו את כל הכתובות הנמצאות בעמוד הראשי, לאחר מכן , במשך כתיבת התוכנית, ניסינו להבין את התבנית בה כתובה
+    האתר. לבסוף, גילינו שקוד הHTML של רוב המוחלט של היוצרים נכתב בארבע תבניות שונות.
+    <br><br>
+    <img src="Resources/1.JPG" height="172" width="911"/>
+    <br><br>
+    2) לדוגמא, באחת התבניות של יוצרים, גילינו שכותרות גדולות (כמו "שירה" , "פרוזה" ,"מאמרים" וכו') הן תחת תבנית H4
+    בHTML.
+    <br> <br><img src="Resources/2.JPG" height="65" width="483"/> <br> <br>
+    3) מנגד, היצירות עצמן כלומר , שמן ולינק לעמוד היצירה, תחת תבנים P או h1 .
+    <br> <img src="Resources/3.JPG" height="90" width="558"/><br><br>
+    4) דוגמא לשליפת מידע לגבי כותרת משנית(כמו "שירה"). ספריית BeautifulSoup מאפשרת לנו לחפש באופן מדויק בתוך מבנה הקוד
+    של HTML, על מנת למצוא כותרות ספציפיות אותן אנחנו מחפשים.
+    <br><br>
+    <img src="Resources/4.JPG" height="293" width="901"/>
+
+    <br><br><br>
+    רקע על מחברים וסופרים מאתר ויקיפדיה:
+    <br><br>
+    <img src="Resources/wiki.png" height="340" width="636"/>
+</div>
+
+<div class="tabs" style="text-align: center">
+    <h1>מנוע חיפוש יוצרים</h1>
+    <h2>*חפש לפי שם היוצר</h2>
+    <br>
+    <table class="main-table" style="margin-right:5%">
+        <tr>
+            <td>שם היוצר</select></td>
+        </tr>
+        <tr>
+            <form id="main">
+                <td><select id="select_authors_1" onchange="if (this.selectedIndex) showResultsAuthors();"
+                            style="width:200px"></select></td>
+            </form>
+            <!-- <td><button onclick="showResultsAuthors()">שלח</button></td> -->
+        </tr>
+    </table>
+    <!--This element is an invisible element used for downloading the xml - do not remove it! -->
+    <a id="downloadAnchorElemXml" style="display:none"></a>
+    <!--This element is an invisible element used for downloading the json - do not remove it! -->
+</div>
+
+<div id="resultSearchDivAuthors" class="tabs" style="display:none">
+    <h1><b>תוצאות החיפוש:</b></h1>
+    <div id="resultAuthors">
+    </div>
+</div>
+
+
+<div class="tabs" style="text-align: center">
+    <h1>מנוע חיפוש יצירות</h1>
+    <h2>*חפש לפי שם המחבר, סוג היצירה, שם היצירה, ובחר באיזה פורמט להציג את התוצאות</h2>
+    <br>
+    <table class="main-table" style="margin-right:5%">
+        <tr>
+            <td>שם היוצר</select></td>
+            <td>סוג היצירה</td>
+            <td>שם היצירה</td>
+            <td>פורמט</td>
+        </tr>
+        <tr>
+            <form id="mainableAuthor">
+                <td><select id="select_authors" onchange="if (this.selectedIndex) updateTypes();"
+                            style="width:200px"></select></td>
+                <td><select id="select_article_type" onchange="if(this.selectedIndex) updateArticles()"
+                            style="width:200px"></select></td>
+                <td><select id="select_article_name" style="width:300px"></select></td>
+                <td>
+                    <select id="select_export_type" style="width:100px">
+                        <option>--</option>
+                        <option>JSON</option>
+                        <option>XML</option>
+                        <option>CSV</option>
+                    </select>
+                </td>
+            </form>
+            <td>
+                <button onclick="exportButton()">שלח</button>
+            </td>
+        </tr>
+    </table>
+    <!--This element is an invisible element used for downloading the json - do not remove it! -->
+    <a id="downloadAnchorElemJson" style="display:none"></a>
+    <!--This element is an invisible element used for downloading the json - do not remove it! -->
+    <!--This element is an invisible element used for downloading the csv - do not remove it! -->
+    <a id="downloadAnchorElemCsv" style="display:none"></a>
+    <!--This element is an invisible element used for downloading the csv - do not remove it! -->
+</div>
+
+<div id="resultSearchDivArticles" class="tabs" style="display:none">
+    <h1><b>תוצאות החיפוש:</b></h1>
+    <div id="resultArticles">
+    </div>
+</div>
+
+
+<div class="tabs"><br>
+    <h1>נתונים סטטיסטיים</h1>
+    <p id="header">
+            <iframe width="400" height="200" scrolling="no" frameborder="no" src="https://fusiontables.googleusercontent.com/embedviz?containerId=googft-gviz-canvas&q=select+col0,+col1+from+1N8ej0qc3VrIfIi4_48SJSWEacVmD5LtQs9IskZRU+order+by+col0+asc+limit+10&viz=GVIZ&t=PIE&uiversion=2&gco_forceIFrame=true&gco_hasLabelsColumn=true&gco_useFirstColumnAsDomain=true&gco_legacyScatterChartLabels=true&gco_is3D=true&gco_pieHole=0&gco_booleanRole=certainty&gco_hAxis=%7B%22useFormatFromData%22:true,+%22viewWindow%22:%7B%22max%22:null,+%22min%22:null%7D,+%22minValue%22:null,+%22maxValue%22:null%7D&gco_vAxes=%5B%7B%22useFormatFromData%22:true,+%22viewWindow%22:%7B%22max%22:null,+%22min%22:null%7D,+%22minValue%22:null,+%22maxValue%22:null%7D,%7B%22useFormatFromData%22:true,+%22viewWindow%22:%7B%22max%22:null,+%22min%22:null%7D,+%22minValue%22:null,+%22maxValue%22:null%7D%5D&gco_theme=maximized&gco_legend=right&gco_backgroundColor=%7B%22fill%22:%22#fce5cd"}&width=500&height=300>
+</iframe>
+                    <br><br>
+    </p>
+</div>
+
+<div class="tabs">
+    <h1>יוצרים לפי עיר הולדתם</h1>
+    <p class="large">
+    <p class="small" style="text-align: center">
+        <br>
+        כל סמן על המפה מייצג את מקום היוולדו של אחד היוצרים (או כמה מהם)
+        <br>
+        לחץ על הסמן בכדי לראות את שמות היוצרים שנולדו במקום
+        <br>
+    </p>
+    <br>
+    <div id="map" class="center"></div>
+    </P>
+</div>
+<br><br><br>
+</body>
+</html>
